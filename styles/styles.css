@@ -64,6 +64,12 @@ li a:hover::before{
     width: 100%;
 }
 
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
 .visit-btn{
     padding: 0.8rem 1.5rem;
     border-radius: 3rem;
@@ -263,7 +269,7 @@ section{
 }
 
 .project-card:hover{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     transform: translateY(-10px)scale(1.02);
 }
