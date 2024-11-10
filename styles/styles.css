@@ -454,7 +454,8 @@ footer ul li a{
 
 @media(max-width:1280px) {
     header{
-        padding: 1rem 2rem;
+        width: 100%;
+        padding: 1rem 5%;
         gap: 2rem;
     }
 
@@ -467,8 +468,15 @@ footer ul li a{
         max-width: 400px;
     }
 
-    .skills-info{
+    .about-cards, .skills-info {
+        justify-content: center;
         flex-direction: column;
+
+    }
+
+    .about-card-container, .skills-card {
+        width: 100%;
+        max-width: 500px; /* Auto-adjust size */
     }
 
     .input-box input{
@@ -487,7 +495,8 @@ footer ul li a{
 
 @media(max-width:768px) {
     header{
-        padding: 1rem 1rem;
+        width: 100%;
+        padding: 1rem 3%;
         gap: 1rem;
     }
 
@@ -506,6 +515,16 @@ footer ul li a{
     
     .home-container{
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-cards, .skills-info {
+        justify-content: center;
+    }
+
+    .about-card-container, .skills-card {
+        width: 100%;
+        max-width: 400px;
     }
 
     .input-box input{
@@ -523,6 +542,11 @@ footer ul li a{
 }
 
 @media(max-width:600px) {
+    header{
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+
     header #menu-icon{
         display: block;
     }
@@ -560,9 +584,23 @@ footer ul li a{
         font-size: 1.5rem;
     }
 
+    header .visit-btn {
+        display: none;
+    }
+
     .home-container img {
         width: 50vw;
         max-width: 100px;
+    }
+    
+    .about-cards, .skills-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-card-container, .skills-card {
+        width: 100%;
+        max-width: 350px;
     }
 
     .input-box input{
