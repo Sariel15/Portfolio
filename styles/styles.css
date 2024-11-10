@@ -426,6 +426,10 @@ section{
     color: rgb(48, 48, 48);
 }
 
+.contact-card .contact-card-Texts {
+    font-weight: 600;
+}
+
 .social-email{
     display: flex;
     align-items: center; 
@@ -481,29 +485,22 @@ footer ul li a{
     .skills-info{
         flex-direction: column;
     }
-
-    .input-box input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
-    }
-
-    .input input::placeholder{
-        font-size: 2.5rem;
-    }
-
-    .input-box i{
-        font-size: 2.5rem;
-    }
 }
 
 @media(max-width:768px) {
-    header{
+    header {
         padding: 1rem 1rem;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-links {
         gap: 1rem;
     }
 
     header .logo{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     header .visit-btn{
@@ -547,21 +544,25 @@ footer ul li a{
         font-size: 1.2rem;
     }
 
+    .contact-card {
+        width: 90%;
+        max-width: 100%;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .contact-card .contact-card-Texts,
+    .contact-card .contact-card-Title {
+        font-size: 1.2rem;
+    }
+
+    .contact-card i {
+        font-size: 1.8rem;
+    }
+
     .section-title {
         font-size: 2.5rem;
-    }
-
-    .input-box input{
-        padding: 1rem 2rem;
-        font-size: 1.8rem
-    };
-
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
-    
-    .input-box i {
-        font-size: 2rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -571,7 +572,7 @@ footer ul li a{
     }
 
     .nav-links{
-        position: absolute;
+        /* position: absolute;
         top: 100%;
         margin-top: 1rem;
         width: 100%;
@@ -581,26 +582,35 @@ footer ul li a{
         flex-direction: column;
         text-align: center;
         background: rgba(0, 0, 0, 0.9);
-        border-radius: 3rem;
+        border-radius: 3rem; */
         display: none;
     }
  
     .nav-links li{
-        margin-top: 1.5rem;
-        padding: 1rem;
+        margin-top: 1rem;
     }
     
     .nav-links.active{
         display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0 0 1.5rem 1.5rem;
+        text-align: center;
     }
 
-    header{
-        padding: 1rem 2rem;
-        gap: 8rem;
+    header {
+        padding: 0.5rem 1rem;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     header .logo{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .home-container img {
@@ -624,18 +634,26 @@ footer ul li a{
         font-size: 0.9rem;
     }
 
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 100%;
-        font-size: 1.5rem;
+    .contact-card {
+        width: 95%;
+        padding: 1rem;
+        border-radius: 1rem;
     }
 
-    .input-box i {
-        font-size: 1.5rem;
+    .contact-card .contact-card-Texts,
+    .contact-card .contact-card-Title {
+        font-size: 1rem;
+        font-weight: 500;
     }
 
-    .input-box input::placeholder{
-        font-size: 0.9rem;
+    .contact-card i {
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
     footer ul{
