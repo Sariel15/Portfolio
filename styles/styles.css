@@ -467,7 +467,7 @@ footer ul li a{
         max-width: 400px;
     }
 
-    .experience-info{
+    .skills-info{
         flex-direction: column;
     }
 
@@ -521,11 +521,7 @@ footer ul li a{
         display: none;
     }
 
-    .grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .experience-info img{
+    .skills-info img{
         width: 70vw;
     }
 }
