@@ -254,10 +254,18 @@ section{
     font-weight: 800;
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
-    color: transparent;}
+    color: transparent;
+}
+
+.about-card-container i{
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
+}
 
 .about-card-container .about-card-Texts {
     font-weight: 500;
+    color: black;
 }
 
 .about-card-container .about-card-Title {
@@ -314,8 +322,15 @@ section{
     color: transparent;
 }
 
+.skills-card i{
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
+}
+
 .skills-card .skills-card-Texts {
     font-weight: 500;
+    color: black;
 }
 
 .skills-card .skills-card-Title {
@@ -379,7 +394,6 @@ section{
 
 .project-card h3{
     font-size: 2rem;
-    font-weight: 500;
 }
 
 .contact-box{
