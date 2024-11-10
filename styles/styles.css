@@ -548,10 +548,6 @@ footer ul li a{
     .input-box input::placeholder{
         font-size: 1.5rem;
     }
-
-    .input-box i{
-        display: none;
-    }
 }
 
 @media(max-width:600px) {
@@ -584,7 +580,7 @@ footer ul li a{
     }
 
     header{
-        padding: 1rem 5rem;
+        padding: 1rem 2rem;
         gap: 8rem;
     }
 
@@ -610,7 +606,7 @@ footer ul li a{
 
     .skills-card .skills-card-Title,
     .skills-card .skills-card-Texts {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .input-box input{
