@@ -227,7 +227,13 @@ section{
     justify-content: center;
 }
 
-.about-card{
+.about-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card-container{
     width: 600px;
     border: 2px solid black;
     border-radius: 3rem;
@@ -243,18 +249,18 @@ section{
     background-color: white;
 }
 
-.about-card:hover{
+.about-card-container:hover{
     background-color: rgba(0, 0, 0, 0.8);
     transform: translateY(-10px)scale(1.02);
 }
 
-.about-card i{
+.about-card-container i{
     font-size: 2rem;
     margin-bottom: 0.8rem;
 }
     
-.about-card .about-card-Title,
-.about-card .about-card-Texts {
+.about-card-container .about-card-Title,
+.about-card-container .about-card-Texts {
     display: flex;
     align-items: center; 
     gap: 0.5rem; 
@@ -264,11 +270,11 @@ section{
     background-clip: text;
     color: transparent;}
 
-.about-card .about-card-Texts {
+.about-card-container .about-card-Texts {
     font-weight: 500;
 }
 
-.about-card .about-card-Title {
+.about-card-container .about-card-Title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -519,14 +525,6 @@ footer ul li a{
 
     .input-box i{
         display: none;
-    }
-
-    .grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .skills-info img{
-        width: 70vw;
     }
 }
 
