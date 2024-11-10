@@ -262,8 +262,6 @@ section{
 
 .about-card-container .about-card-Title {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 1.5rem;
 }
 
@@ -322,8 +320,6 @@ section{
 
 .skills-card .skills-card-Title {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 1.5rem;
 }
 
@@ -523,7 +519,7 @@ footer ul li a{
 
     .skills-card .skills-card-Title,
     .skills-card .skills-card-Texts {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .about-me {
@@ -610,6 +606,11 @@ footer ul li a{
     .about-card-container .about-card-Texts {
         text-align: left;
         font-size: 1rem;
+    }
+
+    .skills-card .skills-card-Title,
+    .skills-card .skills-card-Texts {
+        font-size: 0.7rem;
     }
 
     .input-box input{
