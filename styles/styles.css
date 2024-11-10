@@ -481,10 +481,6 @@ footer ul li a{
         width: 30vw;
         max-width: 400px;
     }
-
-    .skills-info{
-        flex-direction: column;
-    }
 }
 
 @media(max-width:768px) {
@@ -516,13 +512,8 @@ footer ul li a{
         flex-direction: column;
     }
 
-    .skills-info {
-        flex-direction: column;
-    }
-
     .skills-card {
         width: 100%; 
-        padding: 1rem;
     }
 
     .skills-card .skills-card-Title,
@@ -530,13 +521,8 @@ footer ul li a{
         font-size: 1rem;
     }
 
-    .about-me {
-        flex-direction: column;
-    }
-
     .about-card-container {
         width: 100%;
-        padding: 1rem;
     }
 
     .about-card-container .about-card-Title,
@@ -547,7 +533,6 @@ footer ul li a{
     .contact-card {
         width: 90%;
         max-width: 100%;
-        padding: 1.5rem;
         border-radius: 1.5rem;
     }
 
@@ -636,7 +621,6 @@ footer ul li a{
 
     .contact-card {
         width: 95%;
-        padding: 1rem;
         border-radius: 1rem;
     }
 
