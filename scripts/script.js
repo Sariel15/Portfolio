@@ -5,10 +5,12 @@ function setupEventListeners() {
     menuIcon.onclick = toggleNav;
     document.getElementById('github-button').onclick = openGithub;
     document.getElementById('github-icon').onclick = openGithub;
+    document.getElementById('github-icon2').onclick = openGithub;
     document.getElementById('facebook-icon').onclick = openFacebook;
     document.getElementById('facebook-icon2').onclick = openFacebook;
     document.getElementById('linkedin-icon').onclick = openLinkedIn;
     document.getElementById('linkedin-icon2').onclick = openLinkedIn;
+    document.getElementById('email-icon').onclick = redirectToEmail;
     document.getElementById('project1-gitrepo').onclick = openProjectRepo1;
     document.getElementById('project2-gitrepo').onclick = openProjectRepo2;
     document.getElementById('project3-gitrepo').onclick = openProjectRepo3;
@@ -49,6 +51,11 @@ function openProjectRepo4() {
     window.open('https://github.com/Sariel15/AppDev-TechCheck', '_blank');
 }
 
+function redirectToEmail(){
+    window.open('mailto:cmarunrjay99@gmail.com');
+
+}
+
 function downloadCV() {
     const link = document.createElement('a');
     link.href = 'resources/RhoneeResume.pdf';
@@ -56,15 +63,6 @@ function downloadCV() {
     document.body.appendChild(link);    
     link.click();
     document.body.removeChild(link);
-}
-
-function validateForm() {
-    // const email = document.getElementById('email-input').value;
-    const email = "cmarunrjay99@gmail.com";
-    const body = document.getElementById('message-input').value;
-    const subject = 'Message to creator';
-
-    window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
 }
 
 setupEventListeners();

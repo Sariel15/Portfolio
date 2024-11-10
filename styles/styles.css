@@ -382,7 +382,7 @@ section{
     font-weight: 500;
 }
 
-.input-box{
+.contact-box{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -390,6 +390,39 @@ section{
     text-align: center;
     gap: 2rem;
     margin-top: 5rem;
+}
+
+.contact-card{
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    transition: 0.3s ease-in-out;
+    background-color: white;
+}
+
+.contact-card i{
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+    
+.contact-card .contact-card-Title,
+.contact-card .contact-card-Texts {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
 }
 
 .social-email{
@@ -400,29 +433,6 @@ section{
     font-weight: 800;
 }
 
-.input-box input{
-    position: relative;
-    border-radius: 3rem;
-    border: 2px solid black;
-    padding: 2rem 8rem;
-    font-size: 3rem;
-}
-
-.input-box input::placeholder{
-    font-size: 3rem;
-}
-
-.input{
-    position: relative;
-}
-
-.input i{
-    position: absolute;
-    font-size: 4rem;
-    top: 50%;
-    left: 10px;
-    transform: translate(50%, -50%);
-}
 
 footer{
     bottom: 0;
@@ -548,6 +558,10 @@ footer ul li a{
     .input-box input::placeholder{
         font-size: 1.5rem;
     }
+    
+    .input-box i {
+        font-size: 2rem;
+    }
 }
 
 @media(max-width:600px) {
@@ -611,12 +625,16 @@ footer ul li a{
 
     .input-box input{
         padding: 0.5rem 3rem;
-        width: 80%;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .input-box i {
         font-size: 1.5rem;
     }
 
     .input-box input::placeholder{
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
 
     footer ul{
