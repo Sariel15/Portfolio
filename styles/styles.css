@@ -411,6 +411,9 @@ section{
     font-size: 2rem;
     margin-bottom: 0.8rem;
     cursor: pointer;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
 }
     
 .contact-card .contact-card-Title,
@@ -420,9 +423,7 @@ section{
     gap: 0.5rem; 
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(to right, #009dff, #ff00ff);
-    background-clip: text;
-    color: transparent;
+    color: rgb(48, 48, 48);
 }
 
 .social-email{
