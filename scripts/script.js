@@ -6,7 +6,9 @@ function setupEventListeners() {
     document.getElementById('github-button').onclick = openGithub;
     document.getElementById('github-icon').onclick = openGithub;
     document.getElementById('facebook-icon').onclick = openFacebook;
+    document.getElementById('facebook-icon2').onclick = openFacebook;
     document.getElementById('linkedin-icon').onclick = openLinkedIn;
+    document.getElementById('linkedin-icon2').onclick = openLinkedIn;
     document.getElementById('project1-gitrepo').onclick = openProjectRepo1;
     document.getElementById('project2-gitrepo').onclick = openProjectRepo2;
     document.getElementById('project3-gitrepo').onclick = openProjectRepo3;

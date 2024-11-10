@@ -318,7 +318,8 @@ section{
     font-weight: 800;
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
-    color: transparent;}
+    color: transparent;
+}
 
 .skills-card .skills-card-Texts {
     font-weight: 500;
@@ -400,6 +401,14 @@ section{
     margin-top: 5rem;
 }
 
+.social-email{
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
 .input-box input{
     position: relative;
     border-radius: 3rem;
@@ -454,8 +463,7 @@ footer ul li a{
 
 @media(max-width:1280px) {
     header{
-        width: 100%;
-        padding: 1rem 5%;
+        padding: 1rem 2rem;
         gap: 2rem;
     }
 
@@ -468,15 +476,8 @@ footer ul li a{
         max-width: 400px;
     }
 
-    .about-cards, .skills-info {
-        justify-content: center;
+    .skills-info{
         flex-direction: column;
-
-    }
-
-    .about-card-container, .skills-card {
-        width: 100%;
-        max-width: 500px; /* Auto-adjust size */
     }
 
     .input-box input{
@@ -495,8 +496,7 @@ footer ul li a{
 
 @media(max-width:768px) {
     header{
-        width: 100%;
-        padding: 1rem 3%;
+        padding: 1rem 1rem;
         gap: 1rem;
     }
 
@@ -515,16 +515,6 @@ footer ul li a{
     
     .home-container{
         flex-direction: column;
-        gap: 2rem;
-    }
-
-    .about-cards, .skills-info {
-        justify-content: center;
-    }
-
-    .about-card-container, .skills-card {
-        width: 100%;
-        max-width: 400px;
     }
 
     .input-box input{
@@ -542,11 +532,6 @@ footer ul li a{
 }
 
 @media(max-width:600px) {
-    header{
-        width: 100%;
-        padding: 1rem 2rem;
-    }
-
     header #menu-icon{
         display: block;
     }
@@ -584,23 +569,20 @@ footer ul li a{
         font-size: 1.5rem;
     }
 
-    header .visit-btn {
-        display: none;
-    }
-
     .home-container img {
         width: 50vw;
         max-width: 100px;
     }
-    
-    .about-cards, .skills-info {
-        flex-direction: column;
-        align-items: center;
+
+    .skills-info,
+    .about-me {
+        gap: 1rem;
     }
 
-    .about-card-container, .skills-card {
-        width: 100%;
-        max-width: 350px;
+    .skills-card .skills-card-Texts,
+    .about-card-container .about-card-Texts {
+        text-align: left;
+        font-size: 1rem;
     }
 
     .input-box input{
