@@ -517,6 +517,38 @@ footer ul li a{
         flex-direction: column;
     }
 
+    .skills-info {
+        flex-direction: column;
+    }
+
+    .skills-card {
+        width: 100%; 
+        padding: 1rem;
+    }
+
+    .skills-card .skills-card-Title,
+    .skills-card .skills-card-Texts {
+        font-size: 1.2rem;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .about-card-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .about-card-container .about-card-Title,
+    .about-card-container .about-card-Texts {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
     .input-box input{
         padding: 1rem 2rem;
         font-size: 1.8rem
@@ -597,5 +629,9 @@ footer ul li a{
 
     footer ul{
         gap: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
     }
 }
