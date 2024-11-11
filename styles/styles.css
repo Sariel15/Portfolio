@@ -189,18 +189,20 @@ section{
     margin-bottom: 3rem;
 }
 
-.section-title{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-}
-
 .about-me{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.profile-image img{
+    width: 40vw;
+    max-width: 250px;
+    border-radius: 50%;
+    height: auto;
 }
 
 .about-cards {
@@ -208,15 +210,7 @@ section{
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.profile-image img{
-    align-items: center;
-    justify-content: center;
-    width: 30vw;
-    border-radius: 50%;
-    max-width: 450px;
-    height: auto;
+    width: 100%;
 }
 
 .about-card-container{
@@ -259,7 +253,7 @@ section{
 }
 
 .about-card-container .about-card-Texts {
-    font-weight: 400;
+    font-weight: 500;
     color: black;
 }
 
@@ -306,18 +300,13 @@ section{
 }
     
 .skills-card .skills-card-Title,
-.skills-card .skills-card-Texts {
+.skills-card .skills-card-Texts,
+.skills-card i {
     display: flex;
     align-items: center; 
     gap: 0.5rem; 
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(to right, #009dff, #ff00ff);
-    background-clip: text;
-    color: transparent;
-}
-
-.skills-card i{
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
     color: transparent;
@@ -455,7 +444,6 @@ section{
     font-weight: 800;
 }
 
-
 footer{
     bottom: 0;
     left: 0;
@@ -527,12 +515,7 @@ footer ul li a{
     
     .home-container{
         flex-direction: column;
-    }
-
-    .skills-card,
-    .about-card-container {
-        width: 100%; 
-    }
+    }   
 
     .skills-card .skills-card-Title,
     .skills-card .skills-card-Texts {
@@ -541,12 +524,12 @@ footer ul li a{
 
     .about-card-container .about-card-Title,
     .about-card-container .about-card-Texts {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .contact-card .contact-card-Texts,
     .contact-card .contact-card-Title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .contact-card i {
@@ -602,18 +585,17 @@ footer ul li a{
 
     .skills-info,
     .about-me {
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .skills-card .skills-card-Texts,
     .about-card-container .about-card-Texts {
-        text-align: left;
         font-size: 1rem;
     }
 
     .skills-card .skills-card-Title,
-    .skills-card .skills-card-Texts {
-        font-size: 0.9rem;
+    .about-card-container .about-card-Title {
+        font-size: 1.2rem;
     }
 
     .contact-card {
