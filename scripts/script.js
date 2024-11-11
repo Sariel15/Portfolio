@@ -44,7 +44,7 @@ function openProjectRepo2() {
 }
 
 function openProjectRepo3() {
-    window.open('https://github.com/Sariel15/OOPLANG-Case-Study', '_blank');
+    window.open('https://github.com/Encerwal/productReviewSA', '_blank');
 }
 
 function openProjectRepo4() {
