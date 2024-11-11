@@ -529,7 +529,8 @@ footer ul li a{
         flex-direction: column;
     }
 
-    .skills-card {
+    .skills-card,
+    .about-card-container {
         width: 100%; 
     }
 
@@ -564,17 +565,6 @@ footer ul li a{
     }
 
     .nav-links{
-        /* position: absolute;
-        top: 100%;
-        margin-top: 1rem;
-        width: 100%;
-        padding: 1rem;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.9);
-        border-radius: 3rem; */
         display: none;
     }
  
