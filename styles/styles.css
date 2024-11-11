@@ -516,7 +516,7 @@ footer ul li a{
     .home-container{
         flex-direction: column;
     }   
-
+    
     .skills-card .skills-card-Title,
     .skills-card .skills-card-Texts {
         font-size: 1rem;
