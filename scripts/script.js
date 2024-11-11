@@ -44,7 +44,7 @@ function openProjectRepo2() {
 }
 
 function openProjectRepo3() {
-    window.open('https://github.com/Encerwal/productReviewSA', '_blank');
+    window.open('https://github.com/Sariel15/productReviewSA', '_blank');
 }
 
 function openProjectRepo4() {
