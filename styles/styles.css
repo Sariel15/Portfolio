@@ -18,7 +18,7 @@
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ff7c54, #ff428a, #2cc7ff, #66ffdb, #2cc7ff, #ff428a, #ff7c54);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     position: relative;
@@ -115,14 +115,13 @@ li a:hover::before{
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
     backdrop-filter: blur(5px);
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .visit-btn:hover{
     background: linear-gradient(to left, rgb(255, 0, 255), rgb(0, 157, 255));
-    transform: translateY(-2px);
 }
 
 #menu-icon{
@@ -456,7 +455,6 @@ section{
     text-align: center;
     gap: 1rem;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    background-color: white;
     cursor: pointer;
 }
 
@@ -530,6 +528,43 @@ footer ul li a{
     font-size: 300;
     margin-top: 2rem;
 }
+
+.project-card, 
+.skills-card, 
+.about-card-container {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-features {
+    list-style: disc;
+    text-align: left;
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.about-description {
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.about-description p {
+    margin-bottom: 1rem;
+}   
 
 @media(max-width:1280px) {
     header{
@@ -662,10 +697,13 @@ footer ul li a{
         border-radius: 1rem;
     }
 
-    .contact-card .contact-card-Texts,
     .contact-card .contact-card-Title {
         font-size: 1rem;
         font-weight: 500;
+    }
+
+    .contact-card .contact-card-Texts{
+        font-size: 0.8rem;
     }
 
     .contact-card i {
@@ -696,14 +734,3 @@ footer ul li a{
     }
 }
 
-.project-card, 
-.skills-card, 
-.about-card-container {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}

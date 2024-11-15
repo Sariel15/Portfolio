@@ -67,7 +67,6 @@ function openProjectRepo4() {
 
 function redirectToEmail(){
     window.open('mailto:cmarunrjay99@gmail.com');
-
 }
 
 function downloadCV() {
