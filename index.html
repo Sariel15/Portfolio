@@ -6,32 +6,38 @@
     <title>Rhonee's Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="description" content="Rhonee James Tolentino - Backend Developer Portfolio">
+    <meta name="keywords" content="backend developer, python, java, portfolio">
+    <link rel="preload" href="styles/styles.css" as="style">
+    <link rel="preload" href="scripts/script.js" as="script">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><span>Rhonee James Tolentino</span></a>
+    <header class="header" role="banner">
+        <a href="#" class="logo" aria-label="Home"><span>Rhonee James Tolentino</span></a>
         
-        <ul class="nav-links">
-            <li>
-                <a href="#about">About</a>
-            </li>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-        <button class="visit-btn" id="github-button">Visit Github</button>
+        <button class="visit-btn" id="github-button" aria-label="Visit Github Profile">Visit Github</button>
     </header>
 
     <section id="home" class="home">
@@ -51,7 +57,7 @@
                 </div>
 
                 <div class="socials">
-                    <i class="fa-brands fa-facebook" id="facebook-icon"></i>
+                    <i class="fa-brands fa-facebook" id="facebook-icon" aria-label="Facebook Profile"></i>
                     <i class="fa-brands fa-github" id="github-icon"></i>
                     <i class="fa-brands fa-linkedin" id="linkedin-icon"></i>
                 </div>

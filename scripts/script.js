@@ -1,6 +1,21 @@
 const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
 
+// Add intersection observer for smooth animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
 function setupEventListeners() {
     menuIcon.onclick = toggleNav;
     document.getElementById('github-button').onclick = openGithub;
@@ -32,7 +47,7 @@ function openLinkedIn() {
 }
 
 function openGithub() {
-    window.open('https://www.github.com/Sariel15', '_blank');
+    safeWindowOpen('https://www.github.com/Sariel15');
 }
 
 function openProjectRepo1() {
@@ -66,3 +81,18 @@ function downloadCV() {
 }
 
 setupEventListeners();
+
+// Observe all cards
+document.querySelectorAll('.project-card, .skills-card, .about-card-container').forEach(card => {
+    observer.observe(card);
+});
+
+// Add error handling for external links
+function safeWindowOpen(url, target = '_blank') {
+    try {
+        window.open(url, target);
+    } catch (error) {
+        console.error('Failed to open URL:', error);
+        alert('Failed to open link. Please try again later.');
+    }
+}

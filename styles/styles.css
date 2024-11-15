@@ -8,6 +8,13 @@
     list-style: none;
 }
 
+:root {
+    --primary-gradient: linear-gradient(to right, #009dff, #ff00ff);
+    --hover-gradient: linear-gradient(to left, #ff00ff, #009dff);
+    --card-border-radius: 3rem;
+    --transition-speed: 0.3s;
+}
+
 header{
     position: fixed;
     top: 1rem;
@@ -619,6 +626,15 @@ footer ul li a{
         margin-bottom: 2rem;
     }
 
+    section {
+        padding: 6rem 5%;
+    }
+    
+    .project-card, .skills-card, .about-card-container {
+        width: 100%;
+        margin: 0 1rem;
+    }
+
     footer ul{
         gap: 1rem;
     }
@@ -626,4 +642,14 @@ footer ul li a{
     .copyright {
         font-size: 0.8rem;
     }
+}
+
+.project-card, .skills-card, .about-card-container {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
