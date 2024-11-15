@@ -1,7 +1,6 @@
 const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
 
-// Add intersection observer for smooth animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px'
@@ -39,11 +38,11 @@ function toggleNav() {
 }
 
 function openFacebook(){
-    window.open('https://www.facebook.com/rjay.tolentino.54/', '_blank');
+    safeWindowOpen('https://www.facebook.com/rjay.tolentino.54/', '_blank');
 }
 
 function openLinkedIn() {
-    window.open('https://www.linkedin.com/in/rhoneetolentino', '_blank');
+    safeWindowOpen('https://www.linkedin.com/in/rhoneetolentino', '_blank');
 }
 
 function openGithub() {
@@ -51,19 +50,19 @@ function openGithub() {
 }
 
 function openProjectRepo1() {
-    window.open('https://github.com/Sariel15/BlockChain-Charity-Donation', '_blank');
+    safeWindowOpen('https://github.com/Sariel15/BlockChain-Charity-Donation', '_blank');
 }
 
 function openProjectRepo2() {
-    window.open('https://github.com/Sariel15/OOPLANG-Case-Study', '_blank');
+    safeWindowOpen('https://github.com/Sariel15/OOPLANG-Case-Study', '_blank');
 }
 
 function openProjectRepo3() {
-    window.open('https://github.com/Sariel15/productReviewSA', '_blank');
+    safeWindowOpen('https://github.com/Sariel15/productReviewSA', '_blank');
 }
 
 function openProjectRepo4() {
-    window.open('https://github.com/Sariel15/AppDev-TechCheck', '_blank');
+    safeWindowOpen('https://github.com/Sariel15/AppDev-TechCheck', '_blank');
 }
 
 function redirectToEmail(){
@@ -82,12 +81,10 @@ function downloadCV() {
 
 setupEventListeners();
 
-// Observe all cards
 document.querySelectorAll('.project-card, .skills-card, .about-card-container').forEach(card => {
     observer.observe(card);
 });
 
-// Add error handling for external links
 function safeWindowOpen(url, target = '_blank') {
     try {
         window.open(url, target);

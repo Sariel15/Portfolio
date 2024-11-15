@@ -232,13 +232,18 @@ section{
     text-align: left;
     gap: 1rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     background-color: white;
 }
 
 .about-card-container:hover{
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-10px)scale(1.02);
+    transform: translateY(-10px);
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.about-card-container:hover .about-card-Texts {
+    color: white;
 }
 
 .about-card-container i{
@@ -292,13 +297,18 @@ section{
     text-align: left;
     gap: 1rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     background-color: white;
 }
 
 .skills-card:hover{
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-10px)scale(1.02);
+    transform: translateY(-10px);
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.skills-card:hover .skills-card-Texts {
+    color: white;
 }
 
 .skills-card i{
@@ -360,13 +370,13 @@ section{
     border: 2px solid black;
     border-radius: 3rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .project-card:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-10px);
     color: white;
-    transform: translateY(-10px)scale(1.02);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .project-card img{
@@ -648,7 +658,6 @@ footer ul li a{
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
 }
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
