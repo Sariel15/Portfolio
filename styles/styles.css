@@ -378,7 +378,7 @@ section{
 .project-card:hover{
     transform: translateY(-10px);
     color: white;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .project-card img{
@@ -428,8 +428,9 @@ section{
     justify-content: center;
     text-align: center;
     gap: 1rem;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     background-color: white;
+    cursor: pointer;
 }
 
 .contact-card i{
@@ -450,6 +451,18 @@ section{
     font-weight: 800;
     color: rgb(48, 48, 48);
 }
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.contact-card:hover .contact-card-Title,
+.contact-card:hover .contact-card-Texts {
+    color: white;
+}
+
 
 .contact-card .contact-card-Texts {
     font-weight: 600;
