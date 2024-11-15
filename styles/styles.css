@@ -13,6 +13,8 @@
     --hover-gradient: linear-gradient(to left, #ff00ff, #009dff);
     --card-border-radius: 3rem;
     --transition-speed: 0.3s;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 header{
