@@ -17,6 +17,30 @@
     --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 header{
     position: fixed;
     top: 1rem;
@@ -27,11 +51,13 @@ header{
     justify-content: center;
     gap: 5rem;
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 3rem;
     z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .logo{
@@ -89,12 +115,14 @@ li a:hover::before{
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .visit-btn:hover{
     background: linear-gradient(to left, rgb(255, 0, 255), rgb(0, 157, 255));
-    transform: scale(1.03);
+    transform: translateY(-2px);
 }
 
 #menu-icon{
@@ -153,7 +181,8 @@ section{
     background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
     background-clip: text;
     color: transparent;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .btn-group{
@@ -235,7 +264,6 @@ section{
     gap: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    background-color: white;
 }
 
 .about-card-container:hover{
@@ -300,7 +328,6 @@ section{
     gap: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    background-color: white;
 }
 
 .skills-card:hover{
@@ -669,10 +696,13 @@ footer ul li a{
     }
 }
 
-.project-card, .skills-card, .about-card-container {
+.project-card, 
+.skills-card, 
+.about-card-container {
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
