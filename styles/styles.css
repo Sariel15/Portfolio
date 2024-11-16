@@ -724,7 +724,7 @@ footer ul li a{
         padding: 0.8rem 1.2rem;
         left: 50%;
         transform: translateX(-50%);
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 1rem;
     }
 

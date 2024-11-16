@@ -30,6 +30,7 @@ function setupEventListeners() {
     document.getElementById('project3-gitrepo').onclick = openProjectRepo3;
     document.getElementById('project4-gitrepo').onclick = openProjectRepo4;
     document.getElementById('download-cv').onclick = downloadCV;
+    document.getElementById('view-cv').onclick = viewCV;
     initScrollProgress();
     updateName();
     window.addEventListener('resize', updateName);
@@ -65,6 +66,11 @@ function openProjectRepo3() {
 
 function openProjectRepo4() {
     safeWindowOpen('https://github.com/Sariel15/AppDev-TechCheck', '_blank');
+}
+
+function viewCV() {
+    const cvUrl = 'resources/RhoneeResume.pdf';
+    window.open(cvUrl, '_blank');
 }
 
 function redirectToEmail(){
