@@ -573,57 +573,84 @@ footer ul li a{
     }
 
     .home .home-container{
-        gap: 3rem;
+        gap: 5rem;
+        padding: 0 2rem;
     }
 
     .home img {
-        width: 30vw;
-        max-width: 400px;
+        width: 25vw;
+        max-width: 350px;
+    }
+
+    .info-box h1 {
+        font-size: 3.5rem;
+    }
+
+    .info-box span {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 6rem 8%;
     }
 }
 
 @media(max-width:768px) {
     header {
-        padding: 1rem 1rem;
+        padding: 0.8rem 1.5rem;
         width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
+        gap: 1.5rem;
     }
 
     .nav-links {
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     header .logo{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     header .visit-btn{
         display: none;
     }
 
-    .home img {
-        width: 40vw;  
-        max-width: 300px;
-    }
-    
-    .home-container{
+    .home .home-container {
         flex-direction: column;
-    }   
+        gap: 3rem;
+        padding: 2rem 1rem;
+    }
+
+    .home img {
+        width: 45vw;  
+        max-width: 250px;
+    }
+
+    .info-box h1 {
+        font-size: 2.8rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .info-box span {
+        font-size: 1.8rem;
+    }
     
+    .skills-card,
+    .about-card-container,
+    .contact-card {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
     .skills-card .skills-card-Title,
-    .skills-card .skills-card-Texts {
-        font-size: 1rem;
-    }
-
+    .skills-card .skills-card-Texts,
     .about-card-container .about-card-Title,
-    .about-card-container .about-card-Texts {
-        font-size: 1rem;
-    }
-
+    .about-card-container .about-card-Texts,
     .contact-card .contact-card-Texts,
     .contact-card .contact-card-Title {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .contact-card i {
@@ -632,13 +659,33 @@ footer ul li a{
 
     .section-title {
         font-size: 2.5rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 5rem 5%;
     }
 }
 
 @media(max-width:600px) {
+    header {
+        padding: 0.5rem 1rem;
+        width: 95%;
+        gap: 1rem;
+    }
+
     header #menu-icon{
         display: block;
+        font-size: 1.5rem;
+    }
+
+    header .logo{
+        font-size: 0.9rem;
     }
 
     .nav-links{
@@ -646,11 +693,12 @@ footer ul li a{
     }
  
     .nav-links li{
-        margin-top: 1rem;
+        margin: 1rem 0;
     }
     
     .nav-links.active{
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
@@ -659,78 +707,197 @@ footer ul li a{
         background: rgba(0, 0, 0, 0.9);
         border-radius: 0 0 1.5rem 1.5rem;
         text-align: center;
+        animation: slideDown 0.3s ease-out;
     }
 
-    header {
-        padding: 0.5rem 1rem;
-        width: 95%;
-        left: 50%;
-        transform: translateX(-50%);
+    @keyframes slideDown {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
     }
 
-    header .logo{
-        font-size: 1rem;
-    }
-
-    .home-container img {
-        width: 50vw;
-        max-width: 100px;
-    }
-
-    .skills-info,
-    .about-me {
+    .home .home-container {
         gap: 2rem;
     }
 
-    .skills-card .skills-card-Texts,
-    .about-card-container .about-card-Texts {
-        font-size: 1rem;
+    .home img {
+        width: 60vw;
+        max-width: 200px;
+    }
+
+    .info-box {
+        gap: 1rem;
+    }
+
+    .info-box h1 {
+        font-size: 2.2rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-box span {
+        font-size: 1.5rem;
+    }
+
+    .socials {
+        gap: 1.5rem;
+    }
+
+    .socials i {
+        font-size: 2rem;
+    }
+
+    .skills-card,
+    .about-card-container,
+    .project-card,
+    .contact-card {
+        width: 100%;
+        padding: 1.2rem;
+        border-radius: 2rem;
+        margin: 0.5rem 0;
     }
 
     .skills-card .skills-card-Title,
     .about-card-container .about-card-Title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
-    .contact-card {
-        width: 95%;
-        border-radius: 1rem;
+    .skills-card .skills-card-Texts,
+    .about-card-container .about-card-Texts {
+        font-size: 0.9rem;
     }
 
-    .contact-card .contact-card-Title {
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-    .contact-card .contact-card-Texts{
-        font-size: 0.8rem;
-    }
-
-    .contact-card i {
-        font-size: 1.5rem;
-        vertical-align: middle;
+    .contact-card .contact-card-Texts {
+        font-size: 0.85rem;
     }
 
     .section-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
     section {
-        padding: 6rem 5%;
-    }
-    
-    .project-card, .skills-card, .about-card-container {
-        width: 100%;
-        margin: 0 1rem;
+        padding: 4rem 4%;
+        min-height: auto;
     }
 
-    footer ul{
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+    }
+
+    .project-features {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    footer ul {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer ul li a {
+        font-size: 0.9rem;
     }
 
     .copyright {
         font-size: 0.8rem;
+        text-align: center;
     }
 }
 
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #ff7c54, #ff428a, #2cc7ff, #66ffdb);
+    z-index: 10000;
+    transition: width 0.2s ease;
+}
+
+/* Base typing animation styles */
+.typing-text {
+    overflow: hidden;
+    border-right: 2px solid;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* Multiple text animations */
+.typing-text.primary {
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite,
+        colorChange 4s infinite;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.typing-text.secondary {
+    animation: 
+        typing 2s steps(30, end),
+        blink-caret .75s step-end infinite;
+    animation-delay: 4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframe animations */
+@keyframes typing {
+    from { 
+        width: 0;
+        opacity: 1;
+    }
+    to { 
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor; }
+}
+
+@keyframes colorChange {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 0.9em;
+        letter-spacing: 0.1em;
+    }
+}
+
+/* Add these classes to your HTML elements */
+.typing-container {
+    display: inline-block;
+    position: relative;
+}
+
+.typing-text.multi-line {
+    display: block;
+    margin-bottom: 0.5em;
+}

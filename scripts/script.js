@@ -30,7 +30,7 @@ function setupEventListeners() {
     document.getElementById('project3-gitrepo').onclick = openProjectRepo3;
     document.getElementById('project4-gitrepo').onclick = openProjectRepo4;
     document.getElementById('download-cv').onclick = downloadCV;
-    document.getElementById('submit-btn').onclick = validateForm;
+    initScrollProgress();
 }
 
 function toggleNav() {
@@ -78,8 +78,6 @@ function downloadCV() {
     document.body.removeChild(link);
 }
 
-setupEventListeners();
-
 document.querySelectorAll('.project-card, .skills-card, .about-card-container').forEach(card => {
     observer.observe(card);
 });
@@ -91,4 +89,34 @@ function safeWindowOpen(url, target = '_blank') {
         console.error('Failed to open URL:', error);
         alert('Failed to open link. Please try again later.');
     }
+}
+
+function initScrollProgress() {
+    if (!document.querySelector('.scroll-progress')) {
+        const progressBar = document.createElement('div');
+        progressBar.className = 'scroll-progress';
+        document.body.prepend(progressBar);
+    }
+
+    function updateProgress() {
+        const progressBar = document.querySelector('.scroll-progress');
+        const winScroll = window.scrollY;
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = (winScroll / height) * 100;
+        
+        if (progressBar) {
+            progressBar.style.width = `${scrolled}%`;
+        }
+    }
+
+    window.addEventListener('scroll', updateProgress);
+    updateProgress();
+}
+
+document.addEventListener('DOMContentLoaded', setupEventListeners);
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupEventListeners);
+} else {
+    setupEventListeners();
 }
