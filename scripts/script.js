@@ -31,6 +31,8 @@ function setupEventListeners() {
     document.getElementById('project4-gitrepo').onclick = openProjectRepo4;
     document.getElementById('download-cv').onclick = downloadCV;
     initScrollProgress();
+    updateName();
+    window.addEventListener('resize', updateName);
 }
 
 function toggleNav() {
@@ -111,6 +113,26 @@ function initScrollProgress() {
 
     window.addEventListener('scroll', updateProgress);
     updateProgress();
+}
+
+function updateName() {
+    const nameElements = [
+        document.querySelector('.info-box h1'),
+        document.querySelector('.logo span')
+    ];
+    
+    const fullName = "Rhonee James Tolentino";
+    const shortName = "Rhonee Tolentino";
+    
+    nameElements.forEach(element => {
+        if (element) {
+            if (window.innerWidth <= 425) {
+                element.textContent = shortName;
+            } else {
+                element.textContent = fullName;
+            }
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', setupEventListeners);
