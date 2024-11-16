@@ -86,7 +86,13 @@ document.querySelectorAll('.project-card, .skills-card, .about-card-container').
 
 function safeWindowOpen(url, target = '_blank') {
     try {
-        window.open(url, target);
+        const newWindow = window.open();
+        if (newWindow) {
+            newWindow.opener = null;
+            newWindow.location = url;
+        } else {
+            window.location.href = url;
+        }
     } catch (error) {
         console.error('Failed to open URL:', error);
         alert('Failed to open link. Please try again later.');
