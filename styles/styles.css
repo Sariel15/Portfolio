@@ -37,8 +37,7 @@ body::before {
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 header {
@@ -137,6 +136,8 @@ section{
     padding: 8rem 12%;
     width: 100%;
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: 700px;
 }
 
 .home{
@@ -990,6 +991,9 @@ footer ul li a{
     background: linear-gradient(to right, #ff7c54, #ff428a, #2cc7ff, #66ffdb);
     z-index: 10000;
     transition: width 0.2s ease;
+    transform-origin: left;
+    transform: scaleX(var(--scroll-width));
+    width: 100%;
 }
 
 .typing-text {
@@ -1004,10 +1008,7 @@ footer ul li a{
 }
 
 .typing-text.primary {
-    animation: 
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite,
-        colorChange 4s infinite;
+    animation: typing 3.5s steps(40, end), colorChange 4s infinite;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -1039,4 +1040,17 @@ footer ul li a{
 .about-card-container:hover::before,
 .contact-card:hover::before {
     transform: translateX(100%);
+}
+
+/* Use will-change for better performance on animated elements */
+.project-card, 
+.skills-card, 
+.about-card-container {
+    will-change: transform, opacity;
+}
+
+/* Reduce paint operations */
+.scroll-progress {
+    transform: translateZ(0);
+    will-change: transform;
 }
