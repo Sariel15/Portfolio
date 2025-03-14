@@ -41,7 +41,7 @@ function toggleNav() {
 }
 
 function openFacebook(){
-    safeWindowOpen('https://www.facebook.com/rjay.tolentino.54/', '_blank');
+    safeWindowOpen('https://www.facebook.com/tolentinorhonee22/', '_blank');
 }
 
 function openLinkedIn() {
